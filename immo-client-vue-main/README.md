@@ -1,18 +1,42 @@
-# Vue 3 + TypeScript + Vite
+# Immo Client Vue Main
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Ce projet est une application web construite avec Vue.js et Tailwind CSS pour le style, utilisant TypeScript.
 
-## Recommended IDE Setup
+## Installation
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Pour commencer avec ce projet, suivez ces instructions :
 
-## Type Support For `.vue` Imports in TS
+1. Clonez le dépôt (si ce n'est pas déjà fait) :
+   ```bash
+   git clone https://github.com/pellizza1u/AutomatisationDev_TD.git
+   ```
+2. Accédez au dossier du projet :
+   ```bash
+   cd ./immo-client-vue-main
+   ```
+3. Installez les dépendances :
+   ```bash
+   npm install
+   ```
+4. Lancez le serveur de développement :
+   ```bash
+   npm run dev
+   ```
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+L'application devrait être accessible sur `localhost:3000`.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## Utilisation
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+Vous pouvez commencer à travailler sur votre projet en modifiant les fichiers dans le dossier `src`.
+
+## Déploiement
+
+Pour déployer votre application, exécutez :
+
+```bash
+npm run build
+```
+
+Cela créera les fichiers de production dans le dossier `dist`.
+
+---
