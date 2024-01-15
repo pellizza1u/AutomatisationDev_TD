@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  immo-admin-react-main:
+    image: 'node:latest'
+    ports:
+      - "3000:3001"
+    volumes:
+      - ./immo-admin-react-main:/src
+    command: ["npm install", "npm run dev"]
+
+  immo-client-vue-main:
+    image: 'node:latest'
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./immo-client-vue-main:/src
+    command: ["npm install", "npm run dev"]
+
+  immo-api-php-main:
+    image: 'canals/php:latest'
+    env_file: ./db.env
+    ports:
+      - "8000:80"
+    volumes:
+      - ./immo-api-php-main:/var/www/
+      - ./immo-api-php-main/public:/var/www/html
+
+  immo-db-main:
+    image: 'mariadb:latest'
+    # command: '--default-authentication-plugin=mysql_native_password --character-set-server=utf8 --collation-server=utf8_general_ci'
+    env_file: ./db.env
+    ports:
+      - '38547:3306'
+    volumes:
+      - ./sql:/var/sql
